@@ -5,7 +5,7 @@ class Note extends Model{
     super.init({
       title: Sequelize.STRING,
       description: Sequelize.TEXT,
-
+      notify: Sequelize.DATE,
     },
     {
       sequelize,
