@@ -34,7 +34,7 @@ Feel free to check [issues page](https://github.com/mateusamarall/Notes/issues).
 
 ## Contributors
 
-| <img src="https://user-images.githubusercontent.com/37390930/81833478-27562e80-9516-11ea-82a8-f9c38380f35c.png" width="150px;"/><br /><sub><b>Mateus Amaral</b></sub>(https://github.com/mateusamarall)<br />|
+<img src="https://user-images.githubusercontent.com/37390930/81833478-27562e80-9516-11ea-82a8-f9c38380f35c.png" width="150px;"/><br /><sub><b><a href="https://github.com/mateusamarall">Mateus Amaral</a></b></sub>
 
 ## Author
 
