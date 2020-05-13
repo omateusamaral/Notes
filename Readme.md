@@ -40,8 +40,8 @@ Feel free to check [issues page](https://github.com/mateusamarall/Notes/issues).
 
 👤 **Mateus Amaral**
 
-Website: https://www.gitshowcase.com/dashboard
-Github: [@mateusAmaral](https://github.com/mateusamarall)
+Website: https://www.gitshowcase.com/dashboard <br/>
+Github: [@mateusAmaral](https://github.com/mateusamarall) <br/>
 LinkedIn: [@mateusAmaral](https://www.linkedin.com/in/mateus-passos-amaral/)
 
 ## 📝 License
