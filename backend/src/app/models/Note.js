@@ -15,6 +15,7 @@ class Note extends Model {
     );
     return this;
   }
+  //relacionamneto de tabelas feito usando fk
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
   }

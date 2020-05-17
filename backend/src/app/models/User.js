@@ -27,6 +27,7 @@ class User extends Model {
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
+  //relacionamento entre as tabela de note e user
   static associate(models) {
     this.hasMany(models.Note, { foreignKey: 'user_id', as: 'usernotes' });
   }

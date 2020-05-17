@@ -7,6 +7,7 @@ const connection = new Sequelize(database);
 
 User.init(connection);
 Note.init(connection);
+//falando para o bd relacionar as tabelas
 User.associate(connection.models);
 Note.associate(connection.models);
 
