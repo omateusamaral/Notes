@@ -1,18 +1,22 @@
-const Sequelize, {Model} = require('sequelize');
+const Sequelize = require('sequelize');
+const { Model } = require('sequelize');
 
-class Note extends Model{
-  static init(sequelize){
-    super.init({
-      title: Sequelize.STRING,
-      description: Sequelize.TEXT,
-      notify: Sequelize.DATE,
-    },
-    {
-      sequelize,
-    }
+class Note extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        title: Sequelize.STRING,
+        description: Sequelize.TEXT,
+        notify: Sequelize.DATE,
+      },
+      {
+        sequelize,
+      }
     );
     return this;
   }
-
+  static associate(models) {
+    this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+  }
 }
 module.exports = Note;

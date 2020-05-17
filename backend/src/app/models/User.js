@@ -27,5 +27,8 @@ class User extends Model {
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
+  static associate(models) {
+    this.hasMany(models.Note, { foreignKey: 'user_id', as: 'usernotes' });
+  }
 }
 module.exports = User;
