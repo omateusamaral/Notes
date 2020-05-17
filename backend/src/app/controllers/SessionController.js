@@ -33,8 +33,8 @@ module.exports = {
         name,
         email,
       },
+      //passando o segredo e quando expira o token
       token: jwt.sign({ id }, authConfig.secret, {
-        //passando o segredo e quando expira o token
         expiresIn: authConfig.expiresIn,
       }),
     });

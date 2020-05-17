@@ -6,9 +6,11 @@ const authMiddleware = require('./app/middlewares/auth');
 const routes = Router();
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
-routes.post('/users/:user_id/notes', NoteController.store);
-routes.get('/users/:user_id/notes', NoteController.index);
+
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
+routes.post('/users/notes', NoteController.store);
+routes.get('/users/notes', NoteController.index);
+routes.delete('/users/:note_id/notes', NoteController.delete);
 
 module.exports = routes;
