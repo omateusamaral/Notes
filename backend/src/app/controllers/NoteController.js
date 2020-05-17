@@ -34,7 +34,7 @@ module.exports = {
     }
 
     /**
-     * Checando se são é data passada
+     * Checando se é data passada
      */
     const hourStart = startOfHour(parseISO(notify));
 
@@ -55,7 +55,12 @@ module.exports = {
   async delete(req, res) {
     //pegando o id do note por parametro
     const { note_id } = req.params;
+    const UserExists = await User.findByPk(req.userId);
     const NoteExists = await Note.findByPk(note_id);
+
+    if (!UserExists) {
+      return res.status(400).json({ error: 'User does not exists' });
+    }
 
     if (!NoteExists) {
       return res.status(400).json({ error: 'Note does not exists' });
