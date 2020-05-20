@@ -41,7 +41,8 @@ As you already know, was my first test and I had a problem let's explain:
 <br/>
 <p>when you run for the first time <b>yarn test</b> the script will run and create the database, and this database does not "clean" automatically, so if you run again will show some-problems because the datas was already created before. I've searching for solve this issue but unfortunately I not find yet, if you know how to solve <a href="https://github.com/mateusamarall/Notes/issues"> Contributions</a> are welcome and I'll still working for solve this. the second "problem" is about the creating fakes users, I had a problem using so I decided not use it, until find a way to solve.</p>
 
-
+# Front-end 🛠
+![giphy](https://user-images.githubusercontent.com/37390930/82495456-80e3cd80-9ac1-11ea-8a6e-306ab5d3b3ff.gif)
 
 
 
