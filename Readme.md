@@ -1,4 +1,4 @@
-# Notes ✍
+<h1 align="center"> Notes ✍ </h1>
 
 An application for notes what you want. the project not yet finished
 
@@ -20,6 +20,32 @@ Open in your terminal and use. You'll need to have yarn already installed in you
 ```
 yarn dev
 ```
+
+# ✔ TESTS WITH JEST 
+
+![testes](https://user-images.githubusercontent.com/37390930/82394682-0e6ee100-9a20-11ea-8ff7-96938fc733e0.PNG)
+
+if you want see the tests, please follow this steps:
+```
+1º - open the project in your code editor 
+2º - go to src->config-> and opend database.js there change the "database:'notes'" to "process.env.DB_NAME"  
+3º - now just run:  yarn test
+```
+
+PS: was my first test created until now, tips are welcome.
+
+<h3>The good news</h3> <p>is the data I passed  manually worked as you can see above.</p>
+
+ <h3>the bad news</h3>
+As you already know, was my first test and I had a problem let's explain:
+<br/>
+<p>when you run for the first time <b>yarn test</b> the script will run and create the database, and this database does not "clean" automatically, so if you run again will show some-problems because the datas was already created before. I've searching for solve this issue but unfortunately I not find yet, if you know how to solve <a href="https://github.com/mateusamarall/Notes/issues"> Contributions</a> are welcome and I'll still working for solve this. the second "problem" is about the creating fakes users, I had a problem using so I decided not use it, until find a way to solve.</p>
+
+
+
+
+
+
 
 ## developed with
 
