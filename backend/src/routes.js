@@ -5,6 +5,7 @@ const NoteController = require('./app/controllers/NoteController');
 const authMiddleware = require('./app/middlewares/auth');
 const routes = Router();
 routes.post('/users', UserController.store);
+
 routes.post('/sessions', SessionController.store);
 
 routes.use(authMiddleware);
