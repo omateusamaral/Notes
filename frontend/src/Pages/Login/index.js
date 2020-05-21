@@ -1,9 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import api from "../../services/api";
 import logo from "../../assets/logo.png";
 import { FiLogIn, FiArrowRight } from "react-icons/fi";
 import "./style.css";
+
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+
+  async function handleLogin(event) {
+    event.preventDefault();
+
+    try {
+      const response = await api.post("sessions", { email, password });
+
+      const { token } = response.data;
+      if (token) {
+        localStorage.setItem("token", `Bearer ${token}`);
+
+        history.push("/dashboard");
+      } else {
+        alert("Dados não econtrado. Verifique o que foi digitado.");
+      }
+    } catch (error) {
+      alert("Dados não econtrado. Verifique o que foi digitado");
+    }
+  }
   return (
     <>
       <div className="login-container">
@@ -15,9 +39,26 @@ export default function Login() {
               <br />
               <span> Faça seu login para continuar</span>
             </h1>
-            <input className="inputLogin" placeholder="E-mail" /> <br />
-            <input className="inputLogin" placeholder="Senha" />
-            <button className="btnLogin">
+            <input
+              type="email"
+              className="inputLogin"
+              placeholder="E-mail"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />{" "}
+            <br />
+            <input
+              type="password"
+              className="inputLogin"
+              placeholder="Senha"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+            <button
+              type="submit"
+              className="btnLogin"
+              onClick={(event) => handleLogin(event)}
+            >
               Entrar <FiArrowRight size={20} color="#fff" />
             </button>
             <br />
