@@ -81,10 +81,13 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  p a {
+    display: none;
+  }
   .login-container section.form img {
     display: none;
   }
   .login-container section.form {
-    flex-direction: row;
+    padding: 5px;
   }
 }
