@@ -9,9 +9,9 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Login} />
-        <Route path="/" exact component={Singup} />
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/" exact component={Newnote} />
+        <Route path="/singup" exact component={Singup} />
+        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/createnote" exact component={Newnote} />
       </Switch>
     </BrowserRouter>
   );
