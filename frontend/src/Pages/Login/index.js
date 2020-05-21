@@ -33,7 +33,7 @@ export default function Login() {
       <div className="login-container">
         <section className="form">
           <img src={logo} alt="Notes" />
-          <form>
+          <form onSubmit={handleLogin}>
             <h1>
               Bem vindo,
               <br />
@@ -54,11 +54,7 @@ export default function Login() {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
-            <button
-              type="submit"
-              className="btnLogin"
-              onClick={(event) => handleLogin(event)}
-            >
+            <button type="submit" className="btnLogin">
               Entrar <FiArrowRight size={20} color="#fff" />
             </button>
             <br />
