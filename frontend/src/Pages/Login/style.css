@@ -79,27 +79,6 @@ body {
 .login-container section.form form .LinkRegister .spaceFI {
   margin: 5px;
 }
-.error {
-  color: red;
-  animation-name: disappear;
-  animation-duration: 600ms;
-  animation-fill-mode: forwards;
-}
-@keyframes dissapear {
-  0% {
-    opacity: 1;
-    transform: rotateX(90deg);
-  }
-  50% {
-    opacity: 0.5;
-    transform: rotateX(0deg);
-  }
-  100% {
-    display: none;
-    opacity: 0;
-    transform: rotateX(90deg);
-  }
-}
 
 @media only screen and (max-width: 600px) {
   p a {

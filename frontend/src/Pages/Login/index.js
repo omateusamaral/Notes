@@ -25,7 +25,7 @@ export default function Login() {
         alert("Dados não econtrado. Verifique o que foi digitado.");
       }
     } catch (error) {
-      alert("Dados não econtrado. Verifique o que foi digitado");
+      alert("Dados não econtrado. Verifique o que foi digitado.");
     }
   }
   return (
