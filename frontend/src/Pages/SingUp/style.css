@@ -48,7 +48,7 @@
     opacity: 1;
   }
 }
-.register-container form input {
+.register-container form .inputRegister {
   width: 500px;
   height: 60px;
   margin-top: 25px;

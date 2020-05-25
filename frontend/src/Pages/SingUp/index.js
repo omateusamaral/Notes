@@ -1,26 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
-import register from "../../assets/register.png";
-import "./style.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import api from "../../services/api";
-export default function Singup() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+import register from "../../assets/register.png";
+import { FiArrowLeft } from "react-icons/fi";
+import "./style.css";
 
+const initValues = {
+  name: "",
+  email: "",
+  password: "",
+};
+const validationSchema = Yup.object({
+  name: Yup.string().required("Campo obrigatório!"),
+  email: Yup.string().email("Invalid E-mail").required("Campo obrigatório!"),
+  password: Yup.string().required("Campo obrigatório!").min("6"),
+});
+export default function Singup() {
   const history = useHistory();
 
-  async function handleRegister(event) {
-    event.preventDefault();
-
-    const dados = {
-      name,
-      email,
-      password,
-    };
+  async function handleRegister(values) {
     try {
-      const response = await api.post("users", dados);
+      const response = await api.post("users", values);
       const { data } = response;
 
       if (data) {
@@ -39,34 +41,43 @@ export default function Singup() {
             <FiArrowLeft size={35} color="#000" />
           </Link>
         </div>
+
         <img src={register} alt="Register" />
-        <form onSubmit={handleRegister}>
-          <h1>Cadastro</h1>
-          <p>casdrata-se e tenha acesso a nossa plataforma.</p>
-          <input
-            placeholder="Seu nome"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Seu melhor E-mail"
-            required
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Sua senha"
-            required
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-          <button type="submit" className="btn">
-            Cadastrar-se
-          </button>
-        </form>
+        <Formik
+          initialValues={initValues}
+          validationSchema={validationSchema}
+          onSubmit={handleRegister}
+        >
+          <Form>
+            <h1>Cadastro</h1>
+            <p>cadastre-se e tenha acesso a nossa plataforma.</p>
+            <Field
+              placeholder="Seu nome"
+              className="inputRegister"
+              name="name"
+            />
+            <ErrorMessage name="name" />
+            <Field
+              type="email"
+              className="inputRegister"
+              placeholder="Seu melhor E-mail"
+              name="email"
+            />
+            <ErrorMessage name="email" />
+
+            <Field
+              type="password"
+              className="inputRegister"
+              placeholder="Sua senha"
+              name="password"
+            />
+            <ErrorMessage name="password" />
+            <br />
+            <button type="submit" className="btn">
+              Cadastrar-se
+            </button>
+          </Form>
+        </Formik>
       </div>
     </>
   );
