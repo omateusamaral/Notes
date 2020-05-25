@@ -25,8 +25,7 @@ yarn dev
 
 # Front-end 🛠
 ![giphy](https://user-images.githubusercontent.com/37390930/82495456-80e3cd80-9ac1-11ea-8a6e-306ab5d3b3ff.gif)
-
-![giphy (1)](https://user-images.githubusercontent.com/37390930/82509235-a67ed000-9add-11ea-8309-72d8597e61c9.gif)
+![giphy](https://user-images.githubusercontent.com/37390930/82845690-e538cf80-9ebb-11ea-886c-2873f8410af6.gif)
 
 # ✔ TESTS WITH JEST 
 
