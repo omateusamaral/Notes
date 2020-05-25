@@ -24,7 +24,6 @@ export default function Singup() {
       const { data } = response;
 
       if (data) {
-        alert("Usuário criado com suceso");
         history.push("/");
       }
     } catch (err) {
@@ -37,8 +36,7 @@ export default function Singup() {
       <div className="register-container">
         <div className="linktop">
           <Link className="backlink" to="/">
-            <FiArrowLeft size={16} color="#000" className="spaceFI" />
-            Voltar
+            <FiArrowLeft size={35} color="#000" />
           </Link>
         </div>
         <img src={register} alt="Register" />
