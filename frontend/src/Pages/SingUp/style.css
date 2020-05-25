@@ -6,14 +6,12 @@
   background: #f0f0f5;
 }
 .register-container .linktop {
-  display: flex;
-  flex-direction: row;
   align-self: flex-start;
   margin: 0px 0px 0px 10px;
 }
 .register-container .linktop .backlink {
   color: #41414d;
-  font-size: 18px;
+
   text-decoration: none;
   font-weight: 500;
 }
@@ -51,6 +49,8 @@
   }
 }
 .register-container form input {
+  width: 500px;
+  height: 60px;
   margin-top: 25px;
   border-width: 3px;
   border-radius: 2px;
