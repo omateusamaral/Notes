@@ -21,6 +21,13 @@ Open in your terminal and use. You'll need to have yarn already installed in you
 yarn dev
 ```
 
+
+
+# Front-end 🛠
+![giphy](https://user-images.githubusercontent.com/37390930/82495456-80e3cd80-9ac1-11ea-8a6e-306ab5d3b3ff.gif)
+
+![giphy (1)](https://user-images.githubusercontent.com/37390930/82509235-a67ed000-9add-11ea-8309-72d8597e61c9.gif)
+
 # ✔ TESTS WITH JEST 
 
 ![testes](https://user-images.githubusercontent.com/37390930/82394682-0e6ee100-9a20-11ea-8ff7-96938fc733e0.PNG)
@@ -40,12 +47,6 @@ PS: was my first test created until now, tips are welcome.
 As you already know, was my first test and I had a problem let's explain:
 <br/>
 <p>when you run for the first time <b>yarn test</b> the script will run and create the database, and this database does not "clean" automatically, so if you run again will show some-problems because the datas was already created before. I've searching for solve this issue but unfortunately I not find yet, if you know how to solve <a href="https://github.com/mateusamarall/Notes/issues"> Contributions</a> are welcome and I'll still working for solve this. the second "problem" is about the creating fakes users, I had a problem using so I decided not use it, until find a way to solve.</p>
-
-# Front-end 🛠
-![giphy](https://user-images.githubusercontent.com/37390930/82495456-80e3cd80-9ac1-11ea-8a6e-306ab5d3b3ff.gif)
-
-![giphy (1)](https://user-images.githubusercontent.com/37390930/82509235-a67ed000-9add-11ea-8309-72d8597e61c9.gif)
-
 
 
 ## developed with
