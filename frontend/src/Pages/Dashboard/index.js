@@ -40,14 +40,14 @@ export default function Dashboard() {
   return (
     <div className="dashboard-container">
       <header>
-        <h3>Bem vindo, </h3>
+        <h4>Bem vindo, </h4>
         <span>{userName}</span>
         <Link className="button">Criar um novo Note</Link>
         <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#f28500" />
         </button>
       </header>
-      <h1>Notes Cadastrados</h1>
+      <h1>Seus Notes</h1>
       <ul>
         {notes.map((note) => (
           <li key={note.id}>
