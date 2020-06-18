@@ -10,8 +10,9 @@ body {
 .dashboard-container header {
   display: flex;
 }
-.dashboard-container header h3 {
+.dashboard-container header h4 {
   font-size: 25px;
+  margin-top: 3px;
 }
 .dashboard-container header span {
   font-size: 23px;
