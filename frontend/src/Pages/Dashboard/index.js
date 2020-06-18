@@ -1,15 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FiPower, FiX } from "react-icons/fi";
 import "./style.css";
 export default function Dashboard() {
+  const userName = localStorage.getItem("userName");
+  const history = useHistory();
+  function handleLogout() {
+    localStorage.clear();
+    history.push("/");
+  }
   return (
     <div className="dashboard-container">
       <header>
         <h3>Bem vindo, </h3>
-        <span>Mateus</span>
+        <span>{userName}</span>
         <Link className="button">Criar um novo Note</Link>
-        <button>
+        <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#f28500" />
         </button>
       </header>
