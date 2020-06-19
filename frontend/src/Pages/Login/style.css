@@ -76,20 +76,3 @@
   text-decoration: none;
   font-weight: 500;
 }
-
-@media only screen and (max-width: 600px) {
-  p {
-    display: none;
-  }
-  .login-container {
-    margin-left: 0px;
-  }
-  .login-container section.form img {
-    display: none;
-  }
-
-  .login-container section.form form .inputLogin {
-    width: 370px;
-    height: 80px;
-  }
-}
