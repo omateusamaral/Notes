@@ -1,0 +1,147 @@
+@media only screen and (max-width: 490px) {
+  .register-container {
+    display: block;
+  }
+  .register-container img {
+    display: none;
+  }
+  .register-container form {
+    margin-top: 40%;
+    margin-left: 2%;
+    padding: 5px;
+  }
+  .register-container form h1 {
+    font-size: 42px;
+  }
+  .register-container form input {
+    font-size: 20px;
+  }
+  .register-container form .inputRegister {
+    width: 85%;
+  }
+  .register-container form.btn {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 790px) {
+  .register-container form {
+    max-width: 1120px;
+  }
+  .register-container form input {
+    font-size: 20px;
+  }
+  .register-container form .inputRegister {
+    width: 65%;
+  }
+  .register-container form h1 {
+    font-size: 42px;
+  }
+  .register-container img {
+    display: none;
+  }
+  .register-container form .btn {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 1022px) {
+  .register-container h1 {
+    font-size: 40px;
+  }
+  .register-container p {
+    font-size: 30px;
+  }
+  .register-container img {
+    display: none;
+  }
+  .register-container form .inputRegister {
+    font-size: 25px;
+  }
+  .register-container form .btn {
+    font-weight: 100;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .register-container {
+    max-width: 1350px;
+  }
+  .register-container img {
+    width: 50%;
+  }
+  .register-container form {
+    width: 50%;
+  }
+  .register-container form h1 {
+    font-size: 40px;
+  }
+  .register-container form p {
+    font-size: 25px;
+  }
+  .register-container form .inputRegister {
+    font-size: 25px;
+    width: 95%;
+  }
+  .register-container form .btn {
+    font-weight: 100;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .register-container {
+    max-width: 2150px;
+  }
+  .register-container img {
+    width: 60%;
+  }
+  .register-container form {
+    width: 40%;
+    margin-right: 10px;
+    max-width: 1000px;
+  }
+  .register-container form .inputRegister {
+    font-size: 25px;
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .register-container {
+    max-width: 2150px;
+  }
+  .register-container img {
+    width: 50%;
+  }
+  .register-container form {
+    width: 40%;
+    max-width: 1000px;
+  }
+  .register-container form h1 {
+    font-size: 45px;
+  }
+  .register-container form p {
+    font-size: 40px;
+  }
+  .register-container form .inputRegister {
+    font-size: 35px;
+    width: 100%;
+  }
+  .register-container form .btn {
+    font-size: 35px;
+  }
+}
+@media (min-height: 1366px) {
+  .register-container form h1 {
+    font-size: 45px;
+  }
+  .register-container form p {
+    font-size: 30px;
+  }
+  .register-container form .inputRegister {
+    font-size: 35px;
+    margin-right: 15px;
+  }
+  .register-container form .btn {
+    font-size: 35px;
+  }
+}
