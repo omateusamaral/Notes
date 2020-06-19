@@ -6,6 +6,7 @@ import api from "../../services/api";
 import logo from "../../assets/logo.png";
 import { FiLogIn, FiArrowRight } from "react-icons/fi";
 import "./style.css";
+import "./responsive.css";
 const initialValues = {
   email: "",
   password: "",
