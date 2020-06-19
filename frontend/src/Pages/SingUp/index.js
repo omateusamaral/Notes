@@ -6,6 +6,7 @@ import api from "../../services/api";
 import register from "../../assets/register.png";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
+import "./responsive.css";
 
 const initValues = {
   name: "",
