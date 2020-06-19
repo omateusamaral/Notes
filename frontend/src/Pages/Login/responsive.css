@@ -1,6 +1,25 @@
 @media only screen and (max-width: 490px) {
+  .login-container {
+    max-width: 1350px;
+  }
+  .login-container section.form {
+    display: block;
+  }
   .login-container section.form form {
-    margin-left: 20px;
+    margin: 0;
+    margin-left: 1% !important;
+    width: 100%;
+  }
+  .login-container section.form form .inputLogin {
+    width: 90% !important;
+  }
+  .login-container section.form form .btnLogin {
+    padding: 15px !important;
+    width: 50% !important;
+    font-size: 20px !important;
+  }
+  .login-container section.form form .LinkRegister {
+    font-size: 20px !important;
   }
 }
 
@@ -17,7 +36,7 @@
   }
 
   .login-container section.form form .inputLogin {
-    width: 85%;
+    width: 65%;
   }
 }
 @media only screen and (max-width: 1022px) {
@@ -53,6 +72,9 @@
 @media only screen and (min-width: 1024px) {
   .login-container {
     max-width: 1350px;
+  }
+  .login-container section.form {
+    display: flex;
   }
   .login-container section.form img {
     width: 50%;
