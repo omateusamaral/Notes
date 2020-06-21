@@ -4,6 +4,7 @@ import { FiPower, FiX } from "react-icons/fi";
 import * as moment from "moment";
 import api from "../../services/api";
 import "./style.css";
+import "./responsive.css";
 export default function Dashboard() {
   const [notes, setNotes] = useState([]);
   const history = useHistory();
