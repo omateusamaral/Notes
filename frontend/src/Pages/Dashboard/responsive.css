@@ -1,0 +1,86 @@
+@media (max-width: 490px) {
+  .dashboard-container header {
+    margin-left: 40%;
+  }
+  .dashboard-container header h4 {
+    display: none;
+  }
+  .dashboard-container header span {
+    display: none;
+  }
+  .dashboard-container header .button {
+    margin-left: 4px;
+    padding: 15px;
+    width: 160px;
+  }
+  .dashboard-container ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-container ul li {
+    height: 240px;
+  }
+  .dashboard-container ul li p {
+    display: flex;
+  }
+  .dashboard-container ul li strong {
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 790px) {
+  .dashboard-container ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-container ul li {
+    margin-bottom: 10px;
+  }
+  .dashboard-container header a {
+    width: 160px;
+  }
+  .dashboard-container ul li p {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .dashboard-container ul li p {
+    font-size: 20px;
+  }
+  .dashboard-container ul li strong {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .dashboard-container {
+    max-width: 1480px;
+  }
+  .dashboard-container header h4 {
+    font-size: 50px;
+  }
+  .dashboard-container header span {
+    font-size: 50px;
+  }
+  .dashboard-container header a {
+    width: 30%;
+    padding-top: 15px;
+    font-size: 30px;
+  }
+  .dashboard-container header button {
+    width: 160px;
+  }
+  .dashboard-container header button svg {
+    width: 40%;
+    height: 60%;
+  }
+  .dashboard-container h1 {
+    font-size: 60px;
+  }
+  .dashboard-container ul li p {
+    font-size: 30px;
+  }
+  .dashboard-container ul li strong {
+    font-size: 35px;
+  }
+}
