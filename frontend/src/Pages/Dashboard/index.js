@@ -43,7 +43,9 @@ export default function Dashboard() {
       <header>
         <h4>Bem vindo, </h4>
         <span>{userName}</span>
-        <Link className="button">Criar um novo Note</Link>
+        <Link to="/createnote" className="button">
+          Criar um novo Note
+        </Link>
         <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#f28500" />
         </button>
