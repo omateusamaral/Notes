@@ -1,0 +1,54 @@
+.newnote-container {
+  width: 100%;
+  max-width: 2180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+.newnote-container header {
+  display: flex;
+  align-self: flex-start;
+  margin: 0px 0px 0px 10px;
+}
+.newnote-container form {
+  width: 100%;
+  max-width: 450px;
+  animation-name: up;
+  animation-duration: 1000ms;
+  margin: auto;
+  margin-top: 45px;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.newnote-container form h2 {
+  margin-bottom: 20px;
+}
+.newnote-container form input {
+  width: 500px;
+  height: 60px;
+  margin-top: 25px;
+  border-width: 3px;
+  border-radius: 2px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: #000;
+  background: #f0f0f5;
+}
+.newnote-container form button {
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: #f28500;
+  padding: 5%;
+  border-radius: 7px;
+  margin-top: 50px;
+  width: 50%;
+  color: #fff;
+}
