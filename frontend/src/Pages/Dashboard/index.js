@@ -56,7 +56,7 @@ export default function Dashboard() {
           <li key={note.id}>
             <p>{note.title}</p>
             <strong>{note.description}</strong>
-            <p>lembrete: {moment(note.notify).format("DD/MM/YYYY-HH:mm")}</p>
+            <p>Data: {moment(note.notify).format("DD/MM/YYYY HH:mm")}</p>
 
             <button onClick={() => handleDeleteNote(note.id)}>
               <FiX size={20} color="#E02041" />
