@@ -1,24 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import * as moment from "moment";
-import * as Yup from "yup";
+import api from "../../services/api";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
 
-const initValues = {
-  title: "",
-  description: "",
-  date: moment().format("DD/MM/YYYY"),
-  time: moment().format("hh:mm"),
-};
-const validationSchema = Yup.object({
-  title: Yup.string().required("Campo obrigatório!"),
-  description: Yup.string().required("Campo obrigatório!"),
-  date: Yup.string().required("Campo obrigatório"),
-  time: Yup.string().required("campo obrigatório"),
-});
+const Nowdate = moment().format("DD/MM/YYYY hh:mm");
+
 export default function Newnote() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [notify, setNotify] = useState("");
+  const history = useHistory();
+  const token = localStorage.getItem("token");
+
+  async function handleNote(event) {
+    event.preventDefault();
+    const data = {
+      title,
+      description,
+      notify,
+    };
+
+    console.log(moment(notify).isBefore(Nowdate));
+    try {
+      await api.post("/users/notes", data, {
+        headers: {
+          Authorization: token,
+        },
+      });
+
+      history.push("/dashboard");
+    } catch (err) {
+      alert("Erro Ao criar Note. verifique os dados digitados.");
+    }
+  }
+
   return (
     <div className="newnote-container">
       <header>
@@ -26,26 +43,35 @@ export default function Newnote() {
           <FiArrowLeft size={35} color="#000" />
         </Link>
       </header>
-      <Formik initialValues={initValues} validationSchema={validationSchema}>
-        <Form>
-          <h2>Crie um novo note</h2>
-          <Field type="text" name="title" placeholder="Título do note" />
-          <ErrorMessage name="title" />
-          <Field
-            type="text"
-            name="description"
-            placeholder="Descrição  do note"
-          />
 
-          <ErrorMessage name="description" />
-          <Field type="text" name="date" placeholder="data de lembrete" />
-          <ErrorMessage name="date" />
+      <form onSubmit={handleNote}>
+        <h2>Crie um novo note</h2>
+        <input
+          name="title"
+          placeholder="Título do note"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+          required
+        />
 
-          <Field type="time" name="time" placeholder="data de lembrete" />
-          <ErrorMessage name="time" />
-          <button>Criar</button>
-        </Form>
-      </Formik>
+        <input
+          name="description"
+          placeholder="Descrição  do note"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+          required
+        />
+
+        <input
+          name="date"
+          placeholder="data de lembrete. Exemplo:12/12/2020 12:00"
+          value={notify}
+          onChange={(event) => setNotify(event.target.value)}
+          required
+        />
+
+        <button type="submit">Criar</button>
+      </form>
     </div>
   );
 }
