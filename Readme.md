@@ -23,7 +23,7 @@ yarn dev
 
 
 
-# Front-end 🛠
+# Front-end
 ![giphy](https://user-images.githubusercontent.com/37390930/82495456-80e3cd80-9ac1-11ea-8a6e-306ab5d3b3ff.gif)
 ![giphy](https://user-images.githubusercontent.com/37390930/82845690-e538cf80-9ebb-11ea-886c-2873f8410af6.gif)
 
