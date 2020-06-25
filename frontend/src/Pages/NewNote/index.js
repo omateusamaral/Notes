@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-
+import * as moment from "moment";
 import api from "../../services/api";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
@@ -12,7 +12,8 @@ export default function Newnote() {
 
   const history = useHistory();
   const token = localStorage.getItem("token");
-
+  const hourNow = moment().format("yyyy-MM-DDThh:mm");
+  console.log(hourNow);
   async function handleNote(event) {
     event.preventDefault();
     const data = {
@@ -20,7 +21,7 @@ export default function Newnote() {
       description,
       notify,
     };
-
+    console.log(notify);
     try {
       await api.post("/users/notes", data, {
         headers: {
@@ -62,7 +63,7 @@ export default function Newnote() {
 
         <input
           type="datetime-local"
-          min="2020-06-26"
+          min={hourNow}
           name="date"
           value={notify}
           onChange={(event) => setNotify(event.target.value)}
