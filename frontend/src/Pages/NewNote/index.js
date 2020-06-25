@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import * as moment from "moment";
+
 import api from "../../services/api";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
-
-const Nowdate = moment().format("DD/MM/YYYY hh:mm");
 
 export default function Newnote() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [notify, setNotify] = useState("");
+
   const history = useHistory();
   const token = localStorage.getItem("token");
 
@@ -22,7 +21,6 @@ export default function Newnote() {
       notify,
     };
 
-    console.log(moment(notify).isBefore(Nowdate));
     try {
       await api.post("/users/notes", data, {
         headers: {
@@ -63,8 +61,9 @@ export default function Newnote() {
         />
 
         <input
+          type="datetime-local"
+          min="2020-06-26"
           name="date"
-          placeholder="data de lembrete. Exemplo:12/12/2020 12:00"
           value={notify}
           onChange={(event) => setNotify(event.target.value)}
           required

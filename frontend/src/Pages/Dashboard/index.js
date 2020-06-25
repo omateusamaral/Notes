@@ -10,6 +10,7 @@ export default function Dashboard() {
   const history = useHistory();
   const userName = localStorage.getItem("userName");
   const token = localStorage.getItem("token");
+
   useEffect(() => {
     api
       .get("/users/notes", {
