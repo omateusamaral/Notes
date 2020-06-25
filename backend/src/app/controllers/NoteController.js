@@ -31,15 +31,6 @@ module.exports = {
       return res.status(400).json({ error: 'User does not exists' });
     }
 
-    /**
-     * Checando se é data passada
-     */
-    const hourStart = startOfHour(parseISO(notify));
-
-    if (isBefore(hourStart, new Date())) {
-      return res.status(400).json({ error: 'Past dates are not permitted' });
-    }
-
     const notes = await Note.create({
       title,
       description,
