@@ -40,12 +40,7 @@ if you want see the tests, please follow this steps:
 
 PS: was my first test created until now, tips are welcome.
 
-<h3>The good news</h3> <p>is the data I passed  manually worked as you can see above.</p>
 
- <h3>the bad news</h3>
-As you already know, was my first test and I had a problem let's explain:
-<br/>
-<p>when you run for the first time <b>yarn test</b> the script will run and create the database, and this database does not "clean" automatically, so if you run again will show some-problems because the datas was already created before. I've searching for solve this issue but unfortunately I not find yet, if you know how to solve <a href="https://github.com/mateusamarall/Notes/issues"> Contributions</a> are welcome and I'll still working for solve this. the second "problem" is about the creating fakes users, I had a problem using so I decided not use it, until find a way to solve.</p>
 
 
 ## developed with
