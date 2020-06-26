@@ -1,0 +1,42 @@
+@media only screen and (max-width: 490px) {
+  .newnote-container form {
+    margin-left: 25px;
+  }
+  .newnote-container form input {
+    width: 65%;
+  }
+}
+@media (max-width: 790px) {
+  .newnote-container form input {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .newnote-container form h2 {
+    font-size: 35px;
+  }
+  .newnote-container form input {
+    height: 85px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .newnote-container form input {
+    height: 100px;
+    width: 100%;
+    font-size: 25px;
+  }
+  .newnote-container form button {
+    font-size: 35px;
+    width: 60%;
+  }
+}
+@media (min-height: 1366px) {
+  .newnote-container form input {
+    height: 100px;
+    font-size: 25px;
+  }
+  .newnote-container form button {
+    font-size: 35px;
+    width: 60%;
+  }
+}
