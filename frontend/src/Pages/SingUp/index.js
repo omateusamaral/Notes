@@ -54,6 +54,7 @@ export default function Singup() {
             <p>cadastre-se e tenha acesso a nossa plataforma.</p>
             <Field
               placeholder="Seu nome"
+              maxlength="8"
               className="inputRegister"
               name="name"
             />
