@@ -4,6 +4,7 @@ import * as moment from "moment";
 import api from "../../services/api";
 import { FiArrowLeft } from "react-icons/fi";
 import "./style.css";
+import "./responsive.css";
 
 export default function Newnote() {
   const [title, setTitle] = useState("");
