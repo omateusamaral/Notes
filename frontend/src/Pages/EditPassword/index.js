@@ -5,5 +5,3 @@ import React from "react";
 export default function Editpassword() {
   return <h1>olá</h1>;
 }
-
-export default Editpassword;
