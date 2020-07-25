@@ -50,7 +50,7 @@ export default function Dashboard() {
           Criar um novo Note
         </Link>
         <Link to="/account" className=" button buttonConta">
-          Conta
+          Configurações
         </Link>
 
         <button onClick={handleLogout} type="button">
