@@ -1,0 +1,53 @@
+.account-container {
+  width: 100%;
+  max-width: 2180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.account-container .edit-account {
+  width: 100%;
+  max-width: 450px;
+  animation-name: up;
+  animation-duration: 1000ms;
+  margin: auto;
+  margin-top: 45px;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.account-container .edit-account header {
+  display: flex;
+  align-self: flex-start;
+  margin: 0px 0px 50px 10px;
+}
+.account-container .edit-account .edit-email,
+.account-container .edit-account .edit-password {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #000;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+.account-container .edit-account .edit-email:hover,
+.account-container .edit-account .edit-password:hover {
+  opacity: 0.8;
+}
+.account-container .edit-account .edit-password {
+  margin-top: 50px;
+}
+.account-container .edit-account .edit-email span {
+  color: #a3a3a3;
+}
+.account-container .edit-account .edit-email svg,
+.edit-password svg {
+  float: right;
+}
