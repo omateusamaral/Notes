@@ -25,6 +25,7 @@ export default function Login() {
       const { token } = response.data;
       if (token) {
         localStorage.setItem("token", `Bearer ${token}`);
+        localStorage.setItem("email", response.data.user.email);
         localStorage.setItem("userName", response.data.user.name);
         history.push("/dashboard");
       }
