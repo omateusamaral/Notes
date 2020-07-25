@@ -20,7 +20,7 @@ body {
   margin-top: 3px;
 }
 
-.dashboard-container header a {
+.dashboard-container header .button {
   width: 260px;
   margin-left: auto;
   margin-top: 0;
@@ -28,12 +28,16 @@ body {
   padding-top: 20px;
   font-size: 15px;
 }
+.dashboard-container header .buttonConta {
+  margin-left: 15px;
+}
 .dashboard-container header .button {
   background-color: #f28500;
   color: #fff;
   text-decoration: none;
   border-radius: 7px;
 }
+
 .dashboard-container header button {
   height: 60px;
   width: 60px;
