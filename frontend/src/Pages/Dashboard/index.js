@@ -10,7 +10,6 @@ export default function Dashboard() {
   const history = useHistory();
   const userName = localStorage.getItem("userName");
   const token = localStorage.getItem("token");
-  const hourNow = moment().format("yyyy-MM-DDThh:mm");
   useEffect(() => {
     api
       .get("/users/notes", {
