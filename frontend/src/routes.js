@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import Singup from "./Pages/SingUp";
 import Dashboard from "./Pages/Dashboard";
 import Newnote from "./Pages/NewNote";
+import Account from "./Pages/Account";
 import isAuthenticated from "./utils/auth";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -26,6 +27,7 @@ export default function Routes() {
         <Route path="/singup" exact component={Singup} />
         <PrivateRoute path="/dashboard" exact component={Dashboard} />
         <PrivateRoute path="/createnote" exact component={Newnote} />
+        <PrivateRoute path="/account" exact component={Account} />
       </Switch>
     </BrowserRouter>
   );
