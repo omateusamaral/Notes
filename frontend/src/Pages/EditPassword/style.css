@@ -1,0 +1,51 @@
+.password-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 2180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+.password-container form {
+  width: 100%;
+  margin-top: 10%;
+  max-width: 450px;
+  animation-name: up;
+  animation-duration: 1000ms;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.password-container form .inputRegister {
+  width: 500px;
+  height: 60px;
+  margin-top: 25px;
+  border-width: 3px;
+  border-radius: 2px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: #000;
+  background: #f0f0f5;
+}
+
+.password-container form .btn {
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: #f28500;
+  padding: 2%;
+  border-radius: 7px;
+  margin-top: 50px;
+  width: 50%;
+  color: #fff;
+}

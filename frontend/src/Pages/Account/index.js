@@ -22,7 +22,7 @@ export default function Account() {
               {email} <FiChevronRight size={20} color="#000" />
             </span>
           </Link>
-          <Link to="" className="edit-password">
+          <Link to="/editpassword" className="edit-password">
             <div>
               Senha <FiChevronRight size={20} color="#000" />
             </div>
