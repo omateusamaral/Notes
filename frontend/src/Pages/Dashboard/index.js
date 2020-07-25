@@ -10,7 +10,7 @@ export default function Dashboard() {
   const history = useHistory();
   const userName = localStorage.getItem("userName");
   const token = localStorage.getItem("token");
-
+  const hourNow = moment().format("yyyy-MM-DDThh:mm");
   useEffect(() => {
     api
       .get("/users/notes", {
@@ -39,14 +39,20 @@ export default function Dashboard() {
     localStorage.removeItem("userName");
     history.push("/");
   }
+
   return (
     <div className="dashboard-container">
       <header>
         <h4>Bem vindo, </h4>
         <span>{userName}</span>
+
         <Link to="/createnote" className="button">
           Criar um novo Note
         </Link>
+        <Link to="/account" className=" button buttonConta">
+          Conta
+        </Link>
+
         <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#f28500" />
         </button>
